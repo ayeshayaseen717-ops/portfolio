@@ -1,0 +1,166 @@
+/* =========================
+   Intro Section Styles
+========================= */
+
+/* Main Container */
+.intro-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between; /* better spacing */
+  margin: 40px auto;
+  background-color: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 40px 20px;
+  gap: 30px;
+  max-width: 1200px;
+}
+
+/* Left Text Column */
+.intro-text {
+  flex: 1 1 60%;
+  min-width: 280px;
+  color: #333;
+}
+
+.intro-text h1 {
+  font-size: 2.2rem;
+  color: #4c297c;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.intro-text p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 12px;
+  text-align: justify;
+}
+
+.intro-text strong {
+  color: #6b4b9d;
+}
+
+/* Right Profile Column */
+.intro-profile {
+  flex: 1 1 35%;
+  min-width: 250px;
+  text-align: center;
+  background-color: #f0f0ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /*padding: 20px;*/
+  border-radius: 10px;
+}
+
+/* Profile Image */
+.profile-pic {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #4c297c;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+}
+
+/* Tagline */
+.intro-profile .tagline {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+
+/* Laptops & Tablets */
+@media (max-width: 992px) {
+  .intro-text h1 {
+    font-size: 1.9rem;
+  }
+
+  .intro-text p {
+    font-size: 0.98rem;
+    line-height: 1.6;
+  }
+
+  .profile-pic {
+    width: 180px;
+    height: 180px;
+  }
+
+  .intro-profile .tagline {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .intro-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .intro-text,
+  .intro-profile {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .intro-text h1 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .intro-text p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .profile-pic {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 12px;
+  }
+
+  .intro-profile .tagline {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+  .intro-text h1 {
+    font-size: 1.4rem;
+  }
+
+  .intro-text p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    padding: 0 8px;
+  }
+
+  .profile-pic {
+    width: 130px;
+    height: 130px;
+  }
+
+  .intro-profile .tagline {
+    font-size: 0.9rem;
+  }
+}

@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
+/* Fonts & Base Styles */
+html {
+  scroll-padding-top: 80px; /* Offset for sticky navbar */
+  user-select: text;
+  caret-color: transparent;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: auto;
+  margin: 40px 10%; /* or padding: 40px 10%; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Layout (old container, kept if reused) */
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  margin: 40px 10%;
+  background-color: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+/* Table layout for main content */
+main table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+/* Typography */
+h1, h2, h3 {
+  color: #4c297c;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-top: 80px;
+  margin-bottom: 18px;
+    color: #3f3c44;
+}
+
+h3 {
+  font-size: 1rem;
+  margin-top: 40px;
+  margin-bottom: 12px;
+
+}
+
+p {
+  font-size: 1.15rem;
+  margin-bottom: 22px;
+}
+
+ul {
+  padding-left: 22px;
+  margin-bottom: 25px;
+}
+
+ul li {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+.center
+{
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+
+/* Responsive Design */
+/* Responsive Design */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    margin: 30px 5%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .profile, .details {
+    width: 100%;
+  }
+
+  .details {
+    padding: 30px 25px;
   }
 }

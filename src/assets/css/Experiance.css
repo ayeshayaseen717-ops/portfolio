@@ -1,0 +1,39 @@
+/*experiance table*/
+
+table.exp-table {
+    border-collapse: separate;   /* Allows spacing between cells */
+    border-spacing: 10px 20px;   /* Horizontal and vertical gaps */
+    width: 100%;
+  }
+  table.exp-table td {
+    background-color: #ffffff;  /* Light grey background */
+    padding: 20px 40px;           /* Reduced padding */
+    vertical-align: top;
+    border-radius: 2px;          /* Optional rounded corners */
+    border: 1px solid #bbbff2;
+  }
+  table.exp-table h3 {
+    margin-top: 0;
+    margin-bottom: 4px;
+    font-size: 1.3em;
+  }
+
+  table.exp-table h4 {
+  
+    margin-bottom: 4px;
+       font-size: 0.9em;
+  }
+  table.exp-table ul {
+    margin: 0;
+    padding-left: 18px;          /* Indent bullet points */
+  }
+
+  table.exp-table li {
+    margin-bottom: 4px;
+    font-size: 0.9em;
+  }
+table.exp-table p{
+    margin: 0;
+    font-size: 15px;
+  }
+

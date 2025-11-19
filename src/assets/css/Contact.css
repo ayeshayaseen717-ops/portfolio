@@ -1,0 +1,199 @@
+/* ============================= */
+/* Contact Section Styles         */
+/* ============================= */
+#contact {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0 auto;
+  padding: 20px 15px;
+  text-align: center;
+  color: #fff;
+}
+
+/* Heading */
+.contact-heading {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.form_heading 
+{
+  color: #fff;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+.social-icons a { transition: 0.3s ease; }
+.social-icons a[href*="mailto"] i { color: #ea4335; }
+.social-icons a[href*="linkedin"] i { color: #0077b5; }
+.social-icons a[href*="github"] i { color: #333; }
+.social-icons a[href*="wa.me"] i { color: #25D366; }
+.social-icons a:hover i { transform: scale(1.2); }
+
+/* Columns */
+.contact-columns {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #371d5c;
+}
+
+/* Left Column */
+.left-column {
+  flex: 1;
+  /*min-width: 280px;*/
+  max-width: 350px;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: #412964;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  color: #fff;
+}
+.animated-text {
+  font-size: 0.95rem;
+  color: #ffd700;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: slideFadeIn 1.5s ease forwards;
+  animation-delay: 0.5s;
+}
+@keyframes slideFadeIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+.schedule-btn {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 10px 15px;
+  border-radius: 6px;
+  background-color: #ffd700;
+  color: #371d5c;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.schedule-btn:hover { background-color: #e6c200; }
+.note{
+      font-size: 0.9rem;
+    color: #9d8eaf;
+    
+}
+
+/* Right Column */
+.right-column {
+  flex: 1;
+  min-width: 280px;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+  color: #442472;
+  background-color: #412964;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  text-align: left;
+}
+
+/* Contact Form */
+.contact-form { display: flex; flex-direction: column; gap: 12px; }
+.contact-form input, .contact-form textarea {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+.contact-form input::placeholder, .contact-form textarea::placeholder { color: #ccc; }
+.contact-form button {
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  background-color: #ffd700;
+  color: #371d5c;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.contact-form button:hover {
+  background-color: #e6c200;
+  transform: scale(1.03);
+}
+
+/* Multi-Select */
+.multi-select { position: relative; text-align: left; }
+.multi-select-box {
+  padding: 10px 12px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.multi-select-box:hover { background: rgba(255,255,255,0.2); }
+.multi-select-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  background: #371d5c;
+  border-radius: 6px;
+  margin-top: 5px;
+  padding: 10px;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.multi-select-options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  color: #fff;
+  font-weight: normal;
+}
+.multi-select-options label:hover {
+  background: rgba(255,255,255,0.05);
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+.arrow { font-size: 0.8rem; }
+.services-label {
+  font-weight: 500;
+  color: #ffd700;
+  margin-bottom: 5px;
+  display: block;
+}
+.animated-text {
+  font-size: 1.5rem;
+  color: #ffd700;
+  font-weight: 500;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeSlideIn 1.5s ease forwards;
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact-columns { flex-direction: column; align-items: center; }
+  .left-column, .right-column { max-width: 90%; }
+}

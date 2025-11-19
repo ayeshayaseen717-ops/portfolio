@@ -1,0 +1,188 @@
+/* =========================
+   Navbar Base (Desktop + Mobile)
+========================= */
+
+:root {
+  --nav-bg: #371d5c;
+  --accent: #ffcc00;
+}
+
+/* Navbar container */
+.navbar {
+  background-color: var(--nav-bg);
+  padding: 15px 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 2000; /* high so navbar stays above page */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: 700;
+  z-index: 2002;
+}
+
+/* Nav links - desktop */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-links li {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 400;
+  padding: 8px 4px;
+  transition: color 0.2s ease, transform 0.15s ease;
+}
+
+.nav-links li a:hover {
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+/* Hamburger (button to allow focus) */
+.hamburger {
+  display: none; /* shown on mobile */
+  background: transparent;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  gap: 6px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2003; /* above menu */
+}
+
+.hamburger:focus {
+  outline: 2px solid rgba(255,255,255,0.15);
+  outline-offset: 3px;
+}
+
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: #fff;
+  border-radius: 3px;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+
+/* X animation */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* =========================
+   Mobile (Left Drawer)
+========================= */
+@media (max-width: 768px) {
+  /* Show hamburger on mobile */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Drawer menu */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 75%;
+    max-width: 360px;
+    height: 100vh;
+    background-color: var(--nav-bg);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 70px 24px;
+    gap: 0;
+    transition: left 0.36s cubic-bezier(.2,.9,.2,1);
+    z-index: 2002;
+    overflow-y: auto; /* allow scrolling inside drawer if long */
+  }
+
+  .nav-links.open {
+    left: 0; /* slide in */
+  }
+
+  .nav-links li {
+    width: 100%;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .nav-links li:last-child {
+    border-bottom: none;
+  }
+
+  .nav-links li a,
+  .nav-links li button {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 6px 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+.nav-links li a:hover {
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+  /* Hover effect for mobile links */
+  .nav-links li a:hover,
+  .nav-links li button:hover {
+    background-color: rgba(255, 204, 0, 0.1); /* subtle highlight */
+    color: var(--accent);
+    transform: translateX(5px);
+  }
+
+  /* Overlay behind drawer */
+  .menu-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.46);
+    z-index: 2001; /* sits below drawer (2002) but above page */
+    transition: opacity 0.25s ease;
+    backdrop-filter: blur(0.5px);
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 600px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
