@@ -1,4 +1,4 @@
-# 🌟 Personal Portfolio – Ayesha Yaseen
+# 🌟 Portfolio – Ayesha Yaseen
 
 This is my personal portfolio website built using **React.js**.  
 It showcases my skills, projects, experience, and contact details in a clean and responsive design.
@@ -11,21 +11,21 @@ It showcases my skills, projects, experience, and contact details in a clean and
 ---
 
 ## 📌 Features
-- Fully responsive UI  
+- Fully responsive layout  
 - Modern and clean design  
 - Projects showcase section  
 - Skills & experience sections  
-- Contact form  
-- Smooth navigation and animations  
+- Contact information  
+- Smooth navigation
 
 ---
 
 ## 🛠️ Tech Stack
-- **React.js**
-- **JavaScript (ES6+)**
-- **HTML5 & CSS3**
+- **React.js**  
+- **JavaScript (ES6+)**  
+- **HTML5 & CSS3**  
+- **CSS Flexbox / Grid**  
 - **React Icons**
-- **Vite / CRA** (depending on your setup)
 
 ---
 
@@ -33,12 +33,15 @@ It showcases my skills, projects, experience, and contact details in a clean and
 ```
 portfolio/
 │── public/
+│   └── index.html
 │── src/
 │   ├── components/
-│   ├── pages/
+│   │   └── Resume.jsx
 │   ├── assets/
+│   │   └── images/
 │   ├── App.js
 │   ├── index.js
+│   └── assets/css/Resume.css
 │── package.json
 │── README.md
 ```
@@ -53,7 +56,7 @@ To run the project locally:
 git clone https://github.com/ayeshayaseen717-ops/portfolio.git
 ```
 
-### 2️⃣ Navigate to project folder
+### 2️⃣ Navigate to the project folder
 ```bash
 cd portfolio
 ```
@@ -65,30 +68,31 @@ npm install
 
 ### 4️⃣ Start development server
 ```bash
+npm start
+```
+or if using Vite:
+```bash
 npm run dev
 ```
 
 ---
 
 ## 📸 Screenshots
-(Add screenshots here when ready)
+*(Add screenshots here when ready)*
 
 ---
 
 ## 🤝 Contributing
-Contributions are welcome!  
-You can fork this repo and submit a pull request.
+Contributions are welcome! Fork the repo and submit a pull request.
 
 ---
 
 ## 📬 Contact
-If you want to connect:
-
-- **GitHub:** https://github.com/ayeshayaseen717-ops  
-- **Portfolio:** *Coming Soon*  
+- **GitHub:** [ayeshayaseen717-ops](https://github.com/ayeshayaseen717-ops)  
+- **Email:** ayesha@gmail.com  
+- **LinkedIn:** ayesha@linkedin.com  
 
 ---
 
 ## ⭐ Show Your Support
-If you like my portfolio, please give this repository a **star ⭐**!
-
+If you like this portfolio, please give this repository a **star ⭐**!
