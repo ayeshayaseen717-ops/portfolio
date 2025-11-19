@@ -10,7 +10,7 @@ function Resume() {
       <div className="intro-profile responsive-left">
       <img
       src="profile.jpg"
-      alt="Ayesha Yaseen's Profile Picture"
+      alt="Ayesha Yaseen's Profile"
       className="profile-pic"
       />
       <h2>Ayesha Yaseen</h2>
